@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<result>
+    <point query="Vaňkova, Praha" status="200" message="OK" >
+	<item
+		x="14.4287330705"
+		y="50.1389792401"
+		id="125606"
+		source="stre"
+		title="Vánková, Praha, okres Hlavní město Praha, kraj Hlavní město Praha, Česko"
+	/>
+	<item
+		x="14.5398063879"
+		y="50.1038578526"
+		id="122641"
+		source="stre"
+		title="Vaňkova, Praha, okres Hlavní město Praha, kraj Hlavní město Praha, Česko"
+	/>
+    </point>
+</result>

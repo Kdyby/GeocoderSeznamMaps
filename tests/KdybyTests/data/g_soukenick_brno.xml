@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<result>
+    <point query="Soukenická, Brno" status="200" message="OK" >
+	<item
+		x="16.6055403909"
+		y="49.1882309562"
+		id="80040"
+		source="stre"
+		title="Soukenická, Brno, okres Brno-město, kraj Jihomoravský, Česko"
+	/>
+	<item
+		x="16.6073552"
+		y="49.1886832"
+		id="15207401"
+		source="pubt"
+		title="Soukenická"
+	/>
+    </point>
+</result>

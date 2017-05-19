@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rgeocode label="Ostrovského 365/7, Praha, 150 00, okres Hlavní město Praha" status="200" message="Ok">
+    <item id="8968117" name="Ostrovského 365/7" source="addr" type="addr" x="14.401039375" y="50.0686181635" />
+    <item id="121247" name="Ostrovského" source="stre" type="stre" x="14.4010333409" y="50.0687104262" />
+    <item id="97" name="Praha 5" source="quar" type="quar" x="14.3796905556" y="50.0552925" />
+    <item id="13687" name="Smíchov" source="ward" type="ward" x="14.4056561719" y="50.0753085253" />
+    <item id="3468" name="Praha" source="muni" type="muni" x="14.4341412988" y="50.0835493857" />
+    <item id="47" name="Hlavní město Praha" source="dist" type="dist" x="14.4659999944" y="50.0667891855" />
+    <item id="10" name="Hlavní město Praha" source="regi" type="regi" x="14.466" y="50.066789" />
+    <item id="112" name="Česko" source="coun" type="coun" x="15.338411" y="49.742858" />
+</rgeocode>

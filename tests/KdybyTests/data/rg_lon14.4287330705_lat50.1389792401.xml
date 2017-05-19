@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rgeocode label="Vánková 800/16, Praha, 181 00, okres Hlavní město Praha" status="200" message="Ok">
+    <item id="9018436" name="Vánková 800/16" source="addr" type="addr" x="14.4287190612" y="50.1391292659" />
+    <item id="125606" name="Vánková" source="stre" type="stre" x="14.4287330705" y="50.1389792401" />
+    <item id="115" name="Praha 8" source="quar" type="quar" x="14.45457" y="50.1243991667" />
+    <item id="13705" name="Čimice" source="ward" type="ward" x="14.4283190373" y="50.1408464223" />
+    <item id="3468" name="Praha" source="muni" type="muni" x="14.4341412988" y="50.0835493857" />
+    <item id="47" name="Hlavní město Praha" source="dist" type="dist" x="14.4659999944" y="50.0667891855" />
+    <item id="10" name="Hlavní město Praha" source="regi" type="regi" x="14.466" y="50.066789" />
+    <item id="112" name="Česko" source="coun" type="coun" x="15.338411" y="49.742858" />
+</rgeocode>

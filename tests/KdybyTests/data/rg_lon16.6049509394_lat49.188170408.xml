@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rgeocode label="Soukenická 559/5, Brno, 602 00, okres Brno-město" status="200" message="Ok">
+    <item id="8897561" name="Soukenická 559/5" source="addr" type="addr" x="16.6049509394" y="49.188170408" />
+    <item id="80040" name="Soukenická" source="stre" type="stre" x="16.6055403909" y="49.1882309562" />
+    <item id="11" name="Brno-střed" source="quar" type="quar" x="16.5996885801" y="49.1951899569" />
+    <item id="14635" name="Staré Brno" source="ward" type="ward" x="16.5992924636" y="49.1880614591" />
+    <item id="5740" name="Brno" source="muni" type="muni" x="16.607841" y="49.200221" />
+    <item id="72" name="Brno-město" source="dist" type="dist" x="16.5887727824" y="49.2067629887" />
+    <item id="14" name="Jihomoravský" source="regi" type="regi" x="16.635191" y="49.080168" />
+    <item id="112" name="Česko" source="coun" type="coun" x="15.338411" y="49.742858" />
+</rgeocode>

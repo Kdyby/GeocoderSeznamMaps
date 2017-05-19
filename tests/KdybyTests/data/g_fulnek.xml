@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<result>
+    <point query="Fulnek" status="200" message="OK" >
+	<item
+		x="17.9031929449"
+		y="49.7123762259"
+		id="4620"
+		source="muni"
+		title="Fulnek, okres Nový Jičín, kraj Moravskoslezský, Česko"
+	/>
+    </point>
+</result>

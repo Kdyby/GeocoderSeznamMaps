@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<result>
+    <point query="K Zelené louce 2a, Praha" status="200" message="OK" >
+	<item
+		x="14.4636407395"
+		y="50.0212700896"
+		id="11395204"
+		source="addr"
+		title="K Zelené louce 1484/2a, Praha, okres Hlavní město Praha, kraj Hlavní město Praha, Česko"
+	/>
+	<item
+		x="14.4643786127"
+		y="50.0219168693"
+		id="11184113"
+		source="addr"
+		title="K Zelené louce 1367/2, Praha, okres Hlavní město Praha, kraj Hlavní město Praha, Česko"
+	/>
+    </point>
+</result>

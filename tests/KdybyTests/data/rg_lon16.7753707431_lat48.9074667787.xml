@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rgeocode label="Starovičky 46, Starovičky, 691 68, okres Břeclav" status="200" message="Ok">
+    <item id="10043351" name="Starovičky 46" source="addr" type="addr" x="16.7752950053" y="48.9076103435" />
+    <item id="10357" name="Starovičky" source="ward" type="ward" x="16.7753707431" y="48.9074667787" />
+    <item id="5598" name="Starovičky" source="muni" type="muni" x="16.7753707431" y="48.9074667787" />
+    <item id="74" name="Břeclav" source="dist" type="dist" x="16.7768100209" y="48.8553700427" />
+    <item id="14" name="Jihomoravský" source="regi" type="regi" x="16.635191" y="49.080168" />
+    <item id="112" name="Česko" source="coun" type="coun" x="15.338411" y="49.742858" />
+</rgeocode>

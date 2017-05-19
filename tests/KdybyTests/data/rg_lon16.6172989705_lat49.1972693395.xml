@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rgeocode label="Cejl 486/17, Brno, 602 00, okres Brno-město" status="200" message="Ok">
+    <item id="8901358" name="Cejl 486/17" source="addr" type="addr" x="16.6172989705" y="49.1972693395" />
+    <item id="79051" name="Cejl" source="stre" type="stre" x="16.6206081907" y="49.1984656513" />
+    <item id="11" name="Brno-střed" source="quar" type="quar" x="16.5996885801" y="49.1951899569" />
+    <item id="14985" name="Zábrdovice" source="ward" type="ward" x="16.6150150414" y="49.1999210909" />
+    <item id="5740" name="Brno" source="muni" type="muni" x="16.607841" y="49.200221" />
+    <item id="72" name="Brno-město" source="dist" type="dist" x="16.5887727824" y="49.2067629887" />
+    <item id="14" name="Jihomoravský" source="regi" type="regi" x="16.635191" y="49.080168" />
+    <item id="112" name="Česko" source="coun" type="coun" x="15.338411" y="49.742858" />
+</rgeocode>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rgeocode label="Děrné 73, Fulnek, 742 45, okres Nový Jičín" status="200" message="Ok">
+    <item id="9870127" name="Děrné 73" source="addr" type="addr" x="17.9258416088" y="49.7261773815" />
+    <item id="1651" name="Děrné" source="ward" type="ward" x="17.9257930949" y="49.7262086594" />
+    <item id="4620" name="Fulnek" source="muni" type="muni" x="17.9031929449" y="49.7123762259" />
+    <item id="63" name="Nový Jičín" source="dist" type="dist" x="18.003350753" y="49.6510861257" />
+    <item id="12" name="Moravskoslezský" source="regi" type="regi" x="17.979364" y="49.820684" />
+    <item id="112" name="Česko" source="coun" type="coun" x="15.338411" y="49.742858" />
+</rgeocode>

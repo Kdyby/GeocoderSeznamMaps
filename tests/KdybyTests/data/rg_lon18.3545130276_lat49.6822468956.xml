@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rgeocode label="tř. T. G. Masaryka 1119, Frýdek-Místek, 738 01, okres Frýdek-Místek" status="200" message="Ok">
+    <item id="10909643" name="tř. T. G. Masaryka 1119" source="addr" type="addr" x="18.3545130276" y="49.6822468956" />
+    <item id="2378" name="Frýdek" source="ward" type="ward" x="18.3483767554" y="49.6853662215" />
+    <item id="4753" name="Frýdek-Místek" source="muni" type="muni" x="18.3483767554" y="49.6853662215" />
+    <item id="61" name="Frýdek-Místek" source="dist" type="dist" x="18.4974472245" y="49.5952678917" />
+    <item id="12" name="Moravskoslezský" source="regi" type="regi" x="17.979364" y="49.820684" />
+    <item id="112" name="Česko" source="coun" type="coun" x="15.338411" y="49.742858" />
+</rgeocode>
