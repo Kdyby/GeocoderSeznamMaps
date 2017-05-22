@@ -10,30 +10,17 @@
 
 namespace Kdyby\Geocoder\Provider\SeznamMaps;
 
-/**
- * @author Filip Procházka <filip@prochazka.su>
- */
 interface Exception
 {
 
 }
 
-
-
-/**
- * @author Filip Procházka <filip@prochazka.su>
- */
-class NoResultException extends \Geocoder\Exception\NoResult implements Exception
+class NoResultException extends \Geocoder\Exception\NoResult implements \Kdyby\Geocoder\Provider\SeznamMaps\Exception
 {
 
 }
 
-
-
-/**
- * @author Filip Procházka <filip@prochazka.su>
- */
-class UnsupportedOperationException extends \Geocoder\Exception\UnsupportedOperation implements Exception
+class UnsupportedOperationException extends \Geocoder\Exception\UnsupportedOperation implements \Kdyby\Geocoder\Provider\SeznamMaps\Exception
 {
 
 }

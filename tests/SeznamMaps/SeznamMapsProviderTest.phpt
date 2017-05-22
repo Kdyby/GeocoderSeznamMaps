@@ -2,27 +2,24 @@
 
 /**
  * Test: Kdyby\Geocoder\Provider\SeznamMaps\SeznamMapsProvider.
+ *
  * @testCase
  */
 
 namespace KdybyTests\Geocoder\Provider\SeznamMaps;
 
-use Kdyby;
+use Ivory\HttpAdapter\HttpAdapterInterface;
+use Ivory\HttpAdapter\Message\ResponseInterface;
 use Kdyby\Geocoder\Provider\SeznamMaps\SeznamMapsProvider;
-use Tester;
+use Mockery;
 use Tester\Assert;
 
 require_once __DIR__ . '/bootstrap.php';
 
-
-
-/**
- * @author Filip Procházka <filip@prochazka.su>
- */
-class SeznamMapsProviderTest extends Tester\TestCase
+class SeznamMapsProviderTest extends \Tester\TestCase
 {
 
-	public function testReverse_addr()
+	public function testReverseAddr()
 	{
 		$adapter = $this->mockAdapter();
 
@@ -49,14 +46,12 @@ class SeznamMapsProviderTest extends Tester\TestCase
 		Assert::same('Jihomoravský', $adminLevels->get(1)->getName());
 	}
 
-
-
-	public function testGeocode_addr()
+	public function testGeocodeAddr()
 	{
 		$adapter = $this->mockAdapter();
 
 		$provider = new SeznamMapsProvider($adapter);
-		$addresses = $provider->geocode("Soukenická 5, Brno");
+		$addresses = $provider->geocode('Soukenická 5, Brno');
 
 		Assert::count(1, $addresses);
 
@@ -78,14 +73,12 @@ class SeznamMapsProviderTest extends Tester\TestCase
 		Assert::same('Jihomoravský', $adminLevels->get(1)->getName());
 	}
 
-
-
-	public function testGeocode_stre()
+	public function testGeocodeStre()
 	{
 		$adapter = $this->mockAdapter();
 
 		$provider = new SeznamMapsProvider($adapter);
-		$addresses = $provider->geocode("Soukenická, Brno");
+		$addresses = $provider->geocode('Soukenická, Brno');
 
 		Assert::count(1, $addresses);
 
@@ -107,9 +100,7 @@ class SeznamMapsProviderTest extends Tester\TestCase
 		Assert::same('Jihomoravský', $adminLevels->get(1)->getName());
 	}
 
-
-
-	public function dataGeocode_samples()
+	public function dataGeocodeSamples()
 	{
 		return [
 			['Cejl 486/17, 60200 Brno, okres Brno-město', 'Cejl 17, Brno'],
@@ -125,12 +116,10 @@ class SeznamMapsProviderTest extends Tester\TestCase
 		];
 	}
 
-
-
 	/**
-	 * @dataProvider dataGeocode_samples
+	 * @dataProvider dataGeocodeSamples
 	 */
-	public function testGeocode_samples($expected, $input)
+	public function testGeocodeSamples($expected, $input)
 	{
 		$adapter = $this->mockAdapter();
 
@@ -141,17 +130,22 @@ class SeznamMapsProviderTest extends Tester\TestCase
 
 		$address = $addresses->first();
 		$adminLevel2 = $address->getAdminLevels()->has(2) ? $address->getAdminLevels()->get(2)->getName() : NULL;
-		Assert::same($expected, sprintf('%s %s, %s %s, okres %s', $address->getStreetName(), $address->getStreetNumber(), $address->getPostalCode(), $address->getLocality(), $adminLevel2));
+		Assert::same($expected, sprintf(
+			'%s %s, %s %s, okres %s',
+			$address->getStreetName(),
+			$address->getStreetNumber(),
+			$address->getPostalCode(),
+			$address->getLocality(),
+			$adminLevel2
+		));
 	}
-
-
 
 	/**
 	 * @return \Mockery\Mock|\Ivory\HttpAdapter\HttpAdapterInterface
 	 */
 	private function mockAdapter()
 	{
-		$adapter = \Mockery::mock(\Ivory\HttpAdapter\HttpAdapterInterface::class)->shouldDeferMissing();
+		$adapter = Mockery::mock(HttpAdapterInterface::class)->shouldDeferMissing();
 		$adapter->shouldReceive('get')->andReturnUsing(function ($url) {
 			$urlQuery = parse_url($url, PHP_URL_QUERY);
 			$urlPath = parse_url($url, PHP_URL_PATH);
@@ -175,7 +169,7 @@ class SeznamMapsProviderTest extends Tester\TestCase
 				$body = file_get_contents($targetFile);
 			}
 
-			$response = \Mockery::mock(\Ivory\HttpAdapter\Message\ResponseInterface::class)->shouldDeferMissing();
+			$response = Mockery::mock(ResponseInterface::class)->shouldDeferMissing();
 			$response->shouldReceive('getBody')->andReturn($body);
 
 			return $response;
@@ -184,14 +178,10 @@ class SeznamMapsProviderTest extends Tester\TestCase
 		return $adapter;
 	}
 
-
-
 	protected function tearDown()
 	{
-		\Mockery::close();
+		Mockery::close();
 	}
-
-
 
 	private static function webalize($string)
 	{

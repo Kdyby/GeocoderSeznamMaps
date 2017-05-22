@@ -10,25 +10,17 @@
 
 namespace Kdyby\Geocoder\Provider\SeznamMaps;
 
-use Geocoder;
-use Geocoder\Provider\AbstractHttpProvider;
-use Geocoder\Provider\Provider;
-use Kdyby;
+use Geocoder\Exception\NoResult as GeocoderNoResultException;
 use SimpleXMLElement;
 
-
-
-/**
- * @author Filip Procházka <filip@prochazka.su>
- */
-class SeznamMapsProvider extends AbstractHttpProvider implements Provider
+class SeznamMapsProvider extends \Geocoder\Provider\AbstractHttpProvider implements \Geocoder\Provider\Provider
 {
 
 	/** @internal Seznam Geocode API url */
 	const GEOCODE_URI = 'https://api4.mapy.cz/geocode';
 	const REVERSE_URI = 'https://api4.mapy.cz/rgeocode';
 
-	/** regexes for parsing address */
+	// regexes for parsing address
 	const RE_STREET = '(?:(?:\sulice\s)?(?P<streetName>(?:[0-9]+(?=[^/,]+))?[^/,0-9]+(?<![\s\,])))';
 	const RE_NUMBER = '(?:(?<!č\.p\.)(?:č\.p\.\s+)?(?P<streetNumber>[0-9]+(?:\/[0-9]+)?[a-z]?))';
 	// const RE_QUARTER = '(?:\s?čtvrť\s+(?P<quarter>[^,]+))';
@@ -38,11 +30,9 @@ class SeznamMapsProvider extends AbstractHttpProvider implements Provider
 	const RE_REGION = '(?:\s?kraj\s+(?P<region>[^,]+))';
 	const RE_COUNTRY = '(?P<country>(?:Česká Republika|Slovenská Republika|Slovensko|Česko))';
 
-
-
-	/**
-	 * {@inheritDoc}
-	 */
+/**
+ * {@inheritDoc}
+ */
 	public function geocode($address)
 	{
 		if (filter_var($address, FILTER_VALIDATE_IP)) { // This API doesn't handle IPs
@@ -56,7 +46,7 @@ class SeznamMapsProvider extends AbstractHttpProvider implements Provider
 		$point = $xml->point;
 		/** @var \SimpleXMLElement $item */
 		foreach ($point->children() as $item) {
-			if (count($results) == $this->getLimit()) {
+			if (count($results) === $this->getLimit()) {
 				break;
 			}
 
@@ -69,7 +59,7 @@ class SeznamMapsProvider extends AbstractHttpProvider implements Provider
 			try {
 				$rgeocode = $this->executeQuery(self::REVERSE_URI, ['lat' => (string) $attrs->y, 'lon' => (string) $attrs->x]);
 
-			} catch (Geocoder\Exception\NoResult $e) {
+			} catch (GeocoderNoResultException $e) {
 				continue; // ignore
 			}
 
@@ -90,8 +80,6 @@ class SeznamMapsProvider extends AbstractHttpProvider implements Provider
 		return $this->returnResults($results);
 	}
 
-
-
 	/**
 	 * @param \SimpleXMLElement $rgeocode
 	 * @return \SimpleXMLElement|NULL
@@ -110,8 +98,6 @@ class SeznamMapsProvider extends AbstractHttpProvider implements Provider
 		return NULL;
 	}
 
-
-
 	/**
 	 * {@inheritdoc}
 	 */
@@ -127,8 +113,6 @@ class SeznamMapsProvider extends AbstractHttpProvider implements Provider
 
 		return $this->returnResults([array_merge($this->getDefaults(), $resultSet)]);
 	}
-
-
 
 	/**
 	 * @param \SimpleXMLElement $rgeocode
@@ -218,8 +202,6 @@ class SeznamMapsProvider extends AbstractHttpProvider implements Provider
 		return $resultSet;
 	}
 
-
-
 	/**
 	 * @param string $endpoint
 	 * @param array $query
@@ -242,8 +224,6 @@ class SeznamMapsProvider extends AbstractHttpProvider implements Provider
 			throw new \Kdyby\Geocoder\Provider\SeznamMaps\NoResultException(sprintf('Invalid result %s', json_encode($query)), 0, $e);
 		}
 	}
-
-
 
 	/**
 	 * Returns the provider's name.
