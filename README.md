@@ -17,11 +17,6 @@ The best way to install Kdyby/GeocoderSeznamMaps is using  [Composer](http://get
 $ composer require kdyby/geocoder-seznam-maps
 ```
 
-Documentation
-------------
-
-Learn more in the [documentation](https://github.com/Kdyby/GeocoderSeznamMaps/blob/master/docs/en/index.md).
-
 -----
 
 Homepage [http://www.kdyby.org](http://www.kdyby.org) and repository [http://github.com/Kdyby/GeocoderSeznamMaps](http://github.com/Kdyby/GeocoderSeznamMaps).
